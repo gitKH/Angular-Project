@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="product.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">Flatlander Crafted Gems</h1>
+    </header>
+    <div class="container">
+     <!--  Products Container  -->
+      <div class="list-group">
+       <!--  Product Container  -->
+       <div class="list-group-item" ng-repeat="product in store.products">
+        <h3 product-title></h3>
+        <!-- Image Gallery  -->
+        <product-gallery></product-gallery>
+        <!-- Product Tabs  -->
+        <product-tabs></product-tabs>
+      </div>
+    </div>
+   </div>
+  </body>
+</html>
